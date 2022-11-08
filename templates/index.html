@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>freenom-vercel</title>
+    </head>
+
+    <body>
+        <h1>freenom-vercel</h1>
+        <h2>Usage</h2>
+        <p>
+            <code id="curl"> curl -X http://your_url/renew?username=your_username&password=your_password </code>
+        </p>
+        <h2>Try</h2>
+        <form action="renew">
+            <p>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required />
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+            </p>
+            <input type="submit" value="Renew" />
+        </form>
+        <script>
+            var curl = document.getElementById("curl");
+            curl.innerHTML = curl.innerHTML.replace(/your_url/g, window.location.host);
+        </script>
+    </body>
+</html>
