@@ -6,5 +6,5 @@
  * 2、将 “define('IS_SCF', false);” 改为 “define('IS_SCF', true);”
  * 3、干掉最下方的 run(); 调用
  */
-require '../index.php';
+require_once dirname(__FILE__).'/../index.php';
 run();
